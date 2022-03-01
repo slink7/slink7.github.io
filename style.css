@@ -52,7 +52,3 @@ h1 {
     font-size: 25px;
 }
 
-#btn0 {
-    grid-column-end: span 3;
-}
-
