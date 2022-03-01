@@ -22,6 +22,7 @@ function update_screen(){
         case '-': result = first_value - current_value; break;
         case '*': result = first_value * current_value; break;
         case '/': result = first_value / current_value; break;
+        default: result = 0;
     }
     screen.innerHTML = first_value + "</br>" + operator + " " + current_value + "</br>" + result;
 }
@@ -32,7 +33,6 @@ window.onload = function() {
         var btn = document.getElementById("btn"+k);
         console.log("btn"+k)
         btn.onclick = function() {
-            console.log(this.innerHTML);
             current_value*=10;
             current_value+= +this.innerHTML;
             update_screen();
@@ -43,7 +43,6 @@ window.onload = function() {
     operators.forEach(element => {
         var btn = document.getElementById("btn"+element);
         btn.onclick = function() {
-            console.log(this.innerHTML);
             operator = this.innerHTML;
             if(first_number) { 
                 first_number = false;
@@ -57,6 +56,19 @@ window.onload = function() {
             update_screen();
         }
     });
+
+    document.getElementById("btnCE").onclick = function() {
+        current_value = 0;
+        first_value = 0;
+        first_number = true;
+        operator = '';
+        update_screen();
+    }
+
+    document.getElementById("btnBack").onclick = function() {
+        current_value = Math.floor(current_value/10);
+        update_screen();
+    }
 
 };
 
