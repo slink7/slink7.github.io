@@ -1,7 +1,15 @@
 
 var messages = [
-    "Wow",
-    "Boloss",
+    "Reussite Critique",
+    "Reussite",
+    "Beau gosse",
+    "Pas mal",
+    "Bien",
+    "Bof",
+    "Bouh !",
+    "Trop nul",
+    "Tu as un cancer",
+    "Defaite critique",
 ]
 
 var max_value = 10, current_value = 0, previous_value = 0, mean = 0.0;
@@ -16,6 +24,9 @@ function update_display() {
     e.innerHTML = previous_value;
     e = document.getElementById("mean-value");
     e.innerHTML = mean;
+    document.getElementById("commentary").innerHTML = messages[messages.length*(current_value/max_value)];
+    document.getElementById("commentary").style.color = "rgb("+(current_value/max_value)*255+","+(1-current_value/max_value)*255+",0)";
+    document.getElementById("commentary").style.textShadow = "rgb("+(current_value/max_value)*255+","+(1-current_value/max_value)*255+",0) 0 0 10px";
 }
 
 window.onload = function() {
