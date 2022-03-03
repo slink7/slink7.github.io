@@ -1,0 +1,53 @@
+body {
+    background-color: bisque;
+    color:black;
+}
+
+body * {
+    border-radius: 10px;
+}
+
+button {
+    margin:2px;
+    font-size:  30px;
+    background-color: rgb(55, 224, 111);
+    border: 2px solid rgb(3, 124, 43);
+}
+
+button:hover {
+    background-color: rgb(3, 124, 43);
+    border: 2px solid rgb(55, 224, 111);
+}
+
+h1 {
+    grid-column-end: span 4;
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+
+#box {
+
+    background-color: rgb(21, 168, 70);
+    border: 2px solid rgb(3, 124, 43);
+
+    display: grid;
+    grid-template: 1fr 4fr repeat(4,3fr) / repeat(4,1fr);
+    grid-gap: 1px;
+
+    aspect-ratio: 4 / 5;
+    max-height: 80vh;
+
+    margin: 10vh auto 10vh auto;
+
+}
+
+#screen {
+    background-color: white;
+    border: 1px solid black;
+
+    grid-column-end: span 4;
+    margin:5px;
+    padding: 10px;
+    text-align: right;
+    font-size: 25px;
+}

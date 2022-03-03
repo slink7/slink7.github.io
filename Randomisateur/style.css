@@ -1,0 +1,112 @@
+* {
+    background-color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color:rgb(175,175,175);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.credit {
+    color:rgb(10, 10, 10);
+    text-align: right;
+}
+
+#max-value {
+    color: aqua;
+    font-size: 30px;
+    text-shadow:aquamarine 0 0 10px;
+}
+#current-value {
+    color: gold;
+    font-size: 30px;
+    text-shadow:gold 0 0 10px;
+}
+
+.box {
+
+    
+    border: 2px solid rgb(55, 55, 55);
+
+    display: grid;
+    grid-template: repeat(4,1fr) / repeat(5,1fr);
+    grid-gap: 1px;
+
+    aspect-ratio: 5 / 4;
+    max-height: 80vh;
+
+    margin: 10vh auto 10vh auto;
+
+}
+
+.displaybox {
+    grid-area: 1 / 2 / span 3 / span 3;
+}
+
+button {
+    border: 5px solid rgb(152,152,152);
+    color: rgb(152,152,152);
+    margin:3px;
+}
+button:hover {
+    border: 5px solid rgb(172,172,172);
+    color: rgb(172,172,172);
+}
+
+#btnp1 {
+    border: 5px solid rgb(0, 50, 0);
+    color: rgb(0, 50, 0);
+}
+#btnp1:hover {
+    border: 5px solid rgb(20, 70, 20);
+    color: rgb(20, 70, 20);
+}
+#btnp10 {
+    border: 5px solid rgb(0, 125, 0);
+    color: rgb(0, 125, 0);
+}
+#btnp10:hover {
+    border: 5px solid rgb(20, 145, 20);
+    color: rgb(20, 145, 20);
+}
+#btnp100 {
+    border: 5px solid rgb(0, 200, 0);
+    color: rgb(0, 200, 0);
+}
+#btnp100:hover {
+    border: 5px solid rgb(20, 220, 20);
+    color: rgb(20, 220, 20);
+}
+
+#btnm1 {
+    border: 5px solid rgb(50, 0, 0);
+    color: rgb(50, 0, 0);
+}
+#btnm1:hover {
+    border: 5px solid rgb(70, 20, 20);
+    color: rgb(70, 20, 20);
+}
+#btnm10 {
+    border: 5px solid rgb(125, 0, 0);
+    color: rgb(125, 0, 0);
+}
+#btnm10:hover {
+    border: 5px solid rgb(145, 20, 20);
+    color: rgb(145, 20, 20);
+}
+#btnm100 {
+    border: 5px solid rgb(200, 0, 0);
+    color: rgb(200, 0, 0);
+}
+#btnm100:hover {
+    border: 5px solid rgb(220, 20, 20);
+    color: rgb(220, 20, 20);
+}
+
+#btnGENERATE {
+    grid-area: 4 / 1 / span 1 / span 5;
+}
